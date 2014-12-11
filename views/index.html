@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title>Welcome {{user.username}}</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheets/style.css">
+       
+    </head>
+    <body>
+
+        {{#if user}}
+
+            <div>
+                <h3>Welcome {{user.displayName}}</h3>
+                <span>Your Twitter handle: {{user.username}}</span><br/>
+                <span>Welcome {{user._json.description}}</span><br/>
+                <span>You have <strong>{{user._json.followers_count}}</strong> followers</span><br/>
+                <a href="/account">More details</a><br/><br/>
+            </div>
+
+            <div>
+                <a href="/logout">logout</a>
+            </div>
+
+        {{else}}
+            <h1>Please <a href="/auth/twitter">log in</a></h1>
+        {{/if}}
+
+
+    <script src="javascripts/main.js"></script>
+    </body>
+</html>
