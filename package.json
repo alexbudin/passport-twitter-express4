@@ -1,5 +1,5 @@
 {
-  "name": "twitter_passport_express4",
+  "name": "passport_twitter_express4",
   "description" : "An implementation of passport-twitter with Express 4",
   "license" : "MIT",
   "author": "Alex Budin <me@alexbudin.com>",
